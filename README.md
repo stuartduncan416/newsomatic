@@ -69,5 +69,14 @@ Transformers requires PyTorch which is a bit tricky to install on a Pi, but I fo
 
 With Google Cloud Text to Speech, you have to have a Google Cloud account, and you have to set up the credentials in a JSON file on your Pi. Google has provided [some instructions](https://medium.com/secure-and-private-ai-writing-challenge/a-step-by-step-guide-to-installing-pytorch-in-raspberry-pi-a1491bb80531), but it is a bit of a convoluted process. Also note that Google Cloud Text to Speech is not free. You can do alot with their free account level, but ultimately it is a paid service. 
 
+### Project File Overview
+
+**config.ini** - This project can be configured by altering the values in this file. Within the [config] section you can specify the number of RSS feeds you would like to read into your database, the number of items you would like to have in your audio newscast, which text to speech method you would like to use (google or pyttsx3), and the GPIO pin that your button is connected to. The [google] section you can specify a path to your Google Cloud text-to-speech (TTS) credentials file, and also the language code and language name that you would like Google TTS to use. The [database] section would contain all the details required to connect to your database. In this section you will need to specify your database host, name, user, password, and port. There are also entries for all of the RSS feeds you would like to read news article data from. You can enter any number of feeds, but each of these sections must be named as [feedNumber], so feed1, feed2, feed3, feed4 etc. These individual items feature value for the url of the feed, the section name of the feed, and the MCP3008 channel number the potentiometer for that feed is connected to. 
+
+**readRSS.py** - This script reads the RSS feeds specified in the config file, scrapes the article information using the Newspaper 3k python library, and stores the information in the MySQL database. 
+
+**summarize.py** - The script queries the MySQL database, determines which articles do not have summaries, creates a short summary of those articles using the Transformers Python library, and adds these summaries to the MySQL database. Due to the limited processing power of the Pi, this script takes a while to run. It usually takes a minute or two to summarize an article. When this script is running, the Pi also gets pretty hot. 
+
+**createNews.py** : The script listens for a press of the button. When the button is pressed, this script reads the values of the potentiometers, creates a text based script for a news bulletin using the articles summaries based upon the values of the potentiometers, uses text-to-speech (either Google or pyttsx3) to create an MP3 of the news bulletin, and then plays that MP3 over speakers connected to the Pi via the audio Jack. 
 
 
