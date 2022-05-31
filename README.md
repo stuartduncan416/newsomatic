@@ -29,5 +29,12 @@ For this project I used the Pi 4B model with 4GB of memory. This was mostly beca
 
 For my final version of this project, I used a mini breadboard, so that I could fit the breadboard into my custom case, but any size breadboard would be fine. You could also use some form of prototyping board and solder most of the connections for this project. I wanted to be able to change my connections around a bit more, and I am not really great with soldering so I used mostly Dupont style connections. I soldered 22 gauge wire to the leads of the potentiometers and the button, but all other connections were made with Dupont cables. 
 
+### Potentiometers
+
+For this project I used five 3-pin linear rotary potentiometers, with varying resistor values. The kit that I purchased from Amazon included the potentiometers, plastic knobs, nuts and washers. To work with my case design, I had to file down the little metal tab that protrudes the potentiometers. 
+
+### Button
+
+Any button that allows you to connect an input and ground to it should be fine for this project. I first used a [small button] (https://www.pishop.ca/product/tactile-button-switch-6mm-20-pack/) that included with many electronics kits  but I found this style of button challenging to properly mount to my case, and switched to an [“arcade style” button] (https://www.amazon.ca/gp/product/B07FKB6648) which worked far better. 
 
 
