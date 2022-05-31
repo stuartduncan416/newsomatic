@@ -79,4 +79,14 @@ With Google Cloud Text to Speech, you have to have a Google Cloud account, and y
 
 **createNews.py** : The script listens for a press of the button. When the button is pressed, this script reads the values of the potentiometers, creates a text based script for a news bulletin using the articles summaries based upon the values of the potentiometers, uses text-to-speech (either Google or pyttsx3) to create an MP3 of the news bulletin, and then plays that MP3 over speakers connected to the Pi via the audio Jack. 
 
+### Running the Scripts 
+
+On the Raspberry Pi, I set the readRSS.py and summarize.py scripts to run automatically every hour as a cron job. I run the summarize.py file 15 minutes after the readRSS.py file. The post from [BC Robotics](https://bc-robotics.com/tutorials/setting-cron-job-raspberry-pi/) provides a good background on how to set up cron jobs on the Pi. I still manually run the createNews.py script, usually by connecting to the Pi via an SSH client, but the Pi could be configured to run the script on boot up. 
+
+## Future Work
+
+This prototype is very much a work in progress and there are elements of its implementation that could definitely use improvement. I would like to create a bit more of a complex text based script for the news bulletin. I would also like a future version of the prototype to incorporate some type of display to provide some feedback to the user. I also do not like how hot the Pi gets when summarizing the article text, and I might investigate using some form of cloud based solution that wouldn’t tax the Pi as much. That being said I am also a bit torn by the use of cloud based computing in this project, and might examine other free text-to-speech platforms that might produce better results than pyttsx3. 
+
+
+
 
