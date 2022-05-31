@@ -1,5 +1,7 @@
 # Newsomatic
 
+![Newsomatic](https://stuartduncan.ca/newsomaticBanner.jpg)
+
 The Newsomatic is a prototype that is designed to explore the changing physicality of news consumption and the lack of user agency in algorithmic digital journalism distribution through the development of an audio-based digital news device. Created using a single board computer, a custom enclosure, and by embracing physical computing approaches, a prototype of a digital audio device was created that allows for users to control the content of an audio-based news bulletin using tactile knobs and buttons. 
 
 This project was built using a Raspberry Pi 4B with 4GBs of memory. Connected to the Pi via its GPIO pins are 5 potentiometers and a button. The connections between the GPIO pins and the button and knobs are made via a mini-solderless breadboard, and a combination of Dupont style and soldered connections. As the Pi doesn’t have the capability to process analog inputs, an MCP8000 analog-to-digital converter chip was used to read the analog values from the potentiometers. Please see the list below for all of the items required for this project. 
