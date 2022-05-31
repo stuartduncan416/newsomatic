@@ -35,6 +35,6 @@ For this project I used five 3-pin linear rotary potentiometers, with varying re
 
 ### Button
 
-Any button that allows you to connect an input and ground to it should be fine for this project. I first used a [small button] (https://www.pishop.ca/product/tactile-button-switch-6mm-20-pack/) that included with many electronics kits  but I found this style of button challenging to properly mount to my case, and switched to an [“arcade style” button] (https://www.amazon.ca/gp/product/B07FKB6648) which worked far better. 
+Any button that allows you to connect an input and ground to it should be fine for this project. I first used a [small button](https://www.pishop.ca/product/tactile-button-switch-6mm-20-pack/) that included with many electronics kits  but I found this style of button challenging to properly mount to my case, and switched to an [“arcade style” button](https://www.amazon.ca/gp/product/B07FKB6648) which worked far better. 
 
 
