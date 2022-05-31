@@ -1,4 +1,4 @@
-#Newsomatic
+# Newsomatic
 
 The Newsomatic is a prototype that is designed to explore the changing physicality of news consumption and the lack of user agency in algorithmic digital journalism distribution through the development of an audio-based digital news device. Created using a single board computer, a custom enclosure, and by embracing physical computing approaches, a prototype of a digital audio device was created that allows for users to control the content of an audio-based news bulletin using tactile knobs and buttons. 
 
