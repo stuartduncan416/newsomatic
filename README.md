@@ -37,4 +37,37 @@ For this project I used five 3-pin linear rotary potentiometers, with varying re
 
 Any button that allows you to connect an input and ground to it should be fine for this project. I first used a [small button](https://www.pishop.ca/product/tactile-button-switch-6mm-20-pack/) that included with many electronics kits  but I found this style of button challenging to properly mount to my case, and switched to an [“arcade style” button](https://www.amazon.ca/gp/product/B07FKB6648) which worked far better. 
 
+### Connections
+
+This prototype is reliant on MCP3008 to convert the analog signals from the potentiometers to digital signals that can be read by the Pi. This great tutorial and video from [Robotica DIY](https://roboticadiy.com/potentiometer-analog-input-for-the-raspberry-pi-4/), outlines how to connect the potentiometers to the Pi. 
+
+In broad strokes, using Dupont female to male connectors, you connect pins 9 to 16 on the MCP3008 to specific GPIO pins on the Pi. Each pin 1 to 8, on the MCP3008 acts as an analog input reading in values from the potentiometers. One pin on the potentiometer is connected to ground, the middle pin is connected to an input channel of the MCP3008 and the other pin is connected to the 3v3 power from the Pi. 
+
+For the button, one pin of the button is connected to a general GPIO pin (in my case GPIO 4) and the other pin is connected to ground. The Raspberry Pi site has a [simple tutorial](https://projects.raspberrypi.org/en/projects/physical-computing/5)that further explains this process.
+
+### Configuring MySQL (and optionally Apache and PHP)
+
+This project uses a MySQL database and would require Apache and PHP if you would like to use phpMyAdmin to administer the database. I followed this great tutorial from [Random Nerd Tutorials](https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/) to configure MySQL, Apache, PHP and phpMyAdmin on the Pi. A sample database structure, and test data is included in this repository. 
+
+### Required Python Libraries 
+
+This project requires several Python libraries including:
+
+[Google Cloud Libraries](https://cloud.google.com/python/docs/setup)
+[pyttsx3](https://github.com/nateshmbhat/pyttsx3)
+[gpiozero](https://gpiozero.readthedocs.io/en/stable/)
+[Transformers](https://huggingface.co/docs/transformers/index)
+[feedparser](https://github.com/kurtmckee/feedparser)
+[pytz](https://pypi.org/project/pytz/)
+[Newspaper3k](https://newspaper.readthedocs.io/en/latest/)
+[MySQL Connector](https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html)
+[pygame](https://www.pygame.org/)
+
+Each of these libraries is straightforward to install with the exception of Transformers and to a lesser degree the Google Cloud Libraries. 
+
+Transformers requires PyTorch which is a bit tricky to install on a Pi, but I followed these [instructions](https://medium.com/secure-and-private-ai-writing-challenge/a-step-by-step-guide-to-installing-pytorch-in-raspberry-pi-a1491bb80531), and was able to get it to work. 
+
+With Google Cloud Text to Speech, you have to have a Google Cloud account, and you have to set up the credentials in a JSON file on your Pi. Google has provided [some instructions](https://medium.com/secure-and-private-ai-writing-challenge/a-step-by-step-guide-to-installing-pytorch-in-raspberry-pi-a1491bb80531), but it is a bit of a convoluted process. Also note that Google Cloud Text to Speech is not free. You can do alot with their free account level, but ultimately it is a paid service. 
+
+
 
