@@ -53,15 +53,15 @@ This project uses a MySQL database and would require Apache and PHP if you would
 
 This project requires several Python libraries including:
 
-[Google Cloud Libraries](https://cloud.google.com/python/docs/setup)
-[pyttsx3](https://github.com/nateshmbhat/pyttsx3)
-[gpiozero](https://gpiozero.readthedocs.io/en/stable/)
-[Transformers](https://huggingface.co/docs/transformers/index)
-[feedparser](https://github.com/kurtmckee/feedparser)
-[pytz](https://pypi.org/project/pytz/)
-[Newspaper3k](https://newspaper.readthedocs.io/en/latest/)
-[MySQL Connector](https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html)
-[pygame](https://www.pygame.org/)
+- [Google Cloud Libraries](https://cloud.google.com/python/docs/setup)
+- [pyttsx3](https://github.com/nateshmbhat/pyttsx3)
+- [gpiozero](https://gpiozero.readthedocs.io/en/stable/)
+- [Transformers](https://huggingface.co/docs/transformers/index)
+- [feedparser](https://github.com/kurtmckee/feedparser)
+- [pytz](https://pypi.org/project/pytz/)
+- [Newspaper3k](https://newspaper.readthedocs.io/en/latest/)
+- [MySQL Connector](https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html)
+- [pygame](https://www.pygame.org/)
 
 Each of these libraries is straightforward to install with the exception of Transformers and to a lesser degree the Google Cloud Libraries. 
 
