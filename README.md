@@ -12,7 +12,7 @@ The programming for this project was done using the Python programming language.
 
 The article grabber script reads news article website addresses from user defined RSS feeds, scrapes the article information and stores that information in a MySQL database. The article summarizer script uses the Transformers Python library to automatically create a summary of those articles, and stores that summary in a database on the Pi. Finally, the newscast creator script senses when the button is pressed, reads the values of the knobs, and creates a text radio script based on those values. Each knob is dedicated to one subject matter, in the case of my example: Canada, world, business, sports and politics. If you turn a knob clockwise, you will get more of that subject in your news bulletin. The text script is converted to an audio newscast using either Google Cloud Text-to-Speech or the pyttsx3 Python library and played over a speaker connected to the Pi. More details on the scripts included in this repository are available below. 
 
-* * [YouTube video](https://youtu.be/9qo_R_hOarE) which further explains how the Newsomatic works. Also [watch a simple demo](https://youtu.be/81uKX2uwyas) of the Newsomatic in action.  * *
+*[YouTube video](https://youtu.be/9qo_R_hOarE) which further explains how the Newsomatic works. Also [watch a simple demo](https://youtu.be/81uKX2uwyas) of the Newsomatic in action.*
 
 ## Physical Requirements: 
 
